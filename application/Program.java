@@ -9,7 +9,6 @@ import model.entities.CarRental;
 import model.entities.Vehicle;
 import model.services.BrazilTaxService;
 import model.services.RentalService;
-import model.services.TaxServices;
 
 public class Program {
 
@@ -21,7 +20,7 @@ public class Program {
 
 		
 	try {
-		System.out.println("Enter Retntal data");
+		System.out.println("Enter Rental data");
 		System.out.println("Car Model:");
 		String model = sc.nextLine();
 		System.out.println("Pickup dd/MM/yyyy HH:ss");
@@ -40,7 +39,7 @@ public class Program {
 			
 		rentalService.ProcessInvoice(cr);
 		
-		System.out.println("IVOICE:"  );
+		System.out.println("INVOICE:"  );
 		System.out.println("Basic Payment: " +  cr.getInvoice().getBasicPayment() );
 		System.out.println("Tax: " +  cr.getInvoice().getTax() );
 		System.out.println("Total Payment: " + +  cr.getInvoice().totalPayment());
